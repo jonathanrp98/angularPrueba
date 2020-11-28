@@ -7,27 +7,20 @@
       <br><br>
       <h1>Consulta de libros</h1>
       <br><br>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p>Autor:</p>
-          <p>Fecha de publicacion:</p>
-          <p>disponible:</p>
-          <p>valor:</p>
-
+      <div *ngFor="let libro of listaLibros">
+        <div class="card" >
+          <div class="card-body" >
+            <h5 class="card-title">{{libro.name}}</h5>
+            <p>Autor:{{libro.author}}</p>
+            <p>Fecha de publicacion:{{libro.publicationDate}}</p>
+            <p>disponible:{{libro.available}}</p>
+            <p>valor:{{libro.price}}</p>
+          </div>
         </div>
+        <br>
       </div>
-      <br><br>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p>Autor:</p>
-          <p>Fecha de publicacion:</p>
-          <p>disponible:</p>
-          <p>valor:</p>
 
-        </div>
-      </div>
+
     </div>
   </div>
 </div>

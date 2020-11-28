@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
@@ -9,6 +10,7 @@ import { CrearLibroComponent } from './componentes/crear-libro/crear-libro.compo
 import { EditarLibroComponent } from './componentes/editar-libro/editar-libro.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from 'src/app/app-routing.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {AppRoutingModule} from 'src/app/app-routing.module';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
